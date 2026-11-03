@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(gamehost C)
+add_library(gamehost SHARED gamehost.c)
+target_compile_options(gamehost PRIVATE -Wall -Wextra -O2)
+target_link_libraries(gamehost android log dl)
